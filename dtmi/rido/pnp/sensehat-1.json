@@ -13,6 +13,12 @@
     },
     {
       "@type": "Property",
+      "name": "sdkInfo",
+      "displayName": "SDK info",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
       "name": "ipaddr",
       "schema": "string"
     },
@@ -20,45 +26,45 @@
       "@type": "Property",
       "name": "combineTelemetry",
       "schema": "boolean",
-      "writable" :  true
+      "writable": true
     },
     {
-      "@type": ["Property", "TimeSpan"],
+      "@type": [ "Property", "TimeSpan" ],
       "name": "interval",
       "schema": "integer",
       "writable": true,
       "unit": "second"
     },
     {
-      "@type": ["Telemetry", "Temperature"],
+      "@type": [ "Telemetry", "Temperature" ],
       "name": "t1",
       "displayName": "Temperature 1",
       "schema": "double",
       "unit": "degreeCelsius"
     },
     {
-      "@type": ["Telemetry", "Temperature"],
+      "@type": [ "Telemetry", "Temperature" ],
       "name": "t2",
       "displayName": "Temperature 2",
       "schema": "double",
       "unit": "degreeCelsius"
     },
     {
-      "@type": ["Telemetry","RelativeHumidity"],
+      "@type": [ "Telemetry", "RelativeHumidity" ],
       "name": "h",
       "displayName": "Humidity",
       "schema": "double",
       "unit": "percent"
     },
     {
-      "@type": ["Telemetry", "Pressure"],
+      "@type": [ "Telemetry", "Pressure" ],
       "name": "p",
       "displayName": "Pressure",
       "schema": "double",
       "unit": "pascal"
     },
     {
-      "@type": ["Telemetry", "MagneticInduction"],
+      "@type": [ "Telemetry", "MagneticInduction" ],
       "name": "m",
       "displayName": "Magnetic Induction",
       "schema": "double",
