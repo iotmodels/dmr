@@ -1,0 +1,26 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:rido:pnp:sampleDevice;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "name": "memMon",
+        "schema": "dtmi:rido:pnp:memmon;1"
+      },
+      {
+        "@type": "Component",
+        "name": "deviceInfo",
+        "schema": "dtmi:azure:DeviceManagement:DeviceInformation;1"
+      },
+      {
+        "@type": "Property",
+        "name": "serialNumber",
+        "schema": "string"
+      },
+      {
+        "@type": "Command",
+        "name": "reboot"
+      }
+    ]
+  }
