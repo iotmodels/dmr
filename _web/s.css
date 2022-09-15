@@ -1,0 +1,81 @@
+body{
+    font-family:monospace
+}
+
+h3 {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    color: brown
+}
+
+
+
+.search {
+    margin: 5px
+}
+
+.samples {
+    font-size: smaller;
+    color:gray;
+    word-wrap: break-word
+}
+.info {
+    color:grey
+}
+.samples>div>small:hover {
+    color:black;
+    cursor:pointer;
+}
+.status {
+    margin: 5px;
+    bottom: 10px;
+    padding: 10px;
+}
+.schemas {
+    margin-left: 40px;
+    margin: 10px;
+    padding:2px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: lightgrey;
+}
+.schemas>ul>li{
+    list-style-type:circle;
+}
+
+.schemaName {
+    font-style: italic;
+}
+.component {
+    width: fit-content;
+    padding: 10px;
+    border: gray solid 2px;
+    border-radius: 5px;
+    background-color:antiquewhite;
+    margin-bottom: 5px;
+}
+li.righter {
+    margin-left: 40px;
+}
+
+.anchor {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error {
+    color: red
+}
+
+.description {
+    font-size: smaller;
+    font-style: italic;
+    font-weight: lighter;
+}

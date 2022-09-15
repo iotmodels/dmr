@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMR Device Models Repository</title>
+    <link href="_web/s.css" rel="stylesheet" />
+    <!-- /dist/vue.global.prod.js -->
+    <script src="https://unpkg.com/vue@latest/dist/vue.global.prod.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <h1>DTDL Models Repository</h1>
+    <div id="app">
+        <div class="search">
+            DMR: <input type="text" size="70" v-model="repoBaseUrl">
+            <input type="checkbox" checked="true"  v-model="tryExpanded"> TryExpanded
+            <div class="samples">
+                <div id="sample-dtmis" @click="changRepo">
+                    <small id="https://iotmodels.github.io/dmr">https://iotmodels.github.io/dmr</small> | 
+                    <small id="https://devicemodels.azure.com">devicemodels.azure.com </small>
+                </div>    
+            </div>
+        </div>
+        <div class="search">
+            DTMI: <input type="text" size="50" v-model="dtmi">
+            <button @click="search()">Resolve</button>
+        </div>
+        <div class="samples">
+            <div id="sample-dtmis" @click="changeSelection">
+                <small id="dtmi:com:example:TemperatureController;1">dtmi:com:example:TemperatureController;1 </small>
+                <small id="dtmi:rido:pnp:memmon;1">dtmi:rido:pnp:memmon;1 </small>
+            </div>
+        </div>
+        <span class="error" v-if="errInfo">{{ errInfo }}</span>
+        <div class="rendered" v-if="model.length>0">
+            <interface :interface="model[0]" :root="model" :base-repo="repoBaseUrl"></interface>
+        </div>
+    </div>
+    <script type="module">
+        import index from './_web/index.js'
+        import Interface from './_web/comps/Interface.vue.js'
+        const { createApp } = Vue
+        const app = createApp(index)
+        app.component("Interface", Interface)
+        app.mount('#app')
+    </script>
+    <div>
+        Built with Vue3, source code availabe at <a href="https://github.com/iotmodels/dmr">https://github.com/iotmodels/dmr</a>
+    </div>
+</body>
+
+</html>
