@@ -4,7 +4,7 @@ option csharp_namespace = "mqtt_grpc_device_protos";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/any.proto";
 
-package rido.mqtt_grpc_device.proto;
+package rido.mqtt_grpc_device;
 
 // @topic: -> device/{clientId}/tel[/{telName}]
 message Telemetries {
