@@ -11,15 +11,15 @@ message Telemetries {
 	double temperature = 1; 
 	double workingSet = 2;
 }
-// @topic: -> device/{clientId}/props[/{propName}]
+// @topic: -> device/{clientId}/props[/{propName}] (r)
 message Properties {
 	string sdkInfo = 1;
 	google.protobuf.Timestamp started = 2;
 	int32 interval = 3;
 }
 
-// @topic: <- device/{clientId}/props[/{propName}]/set
-// @topic: -> device/{clientId}/props[/{propName}]/ack
+// @topic: <- device/{clientId}/props[/{propName}]/set (r)
+// @topic: -> device/{clientId}/props[/{propName}]/ack (r)
 service PropertiesSetter {
 	rpc set_interval(Properties) returns (ack);
 }
@@ -32,9 +32,10 @@ service Commands {
 }
 
 message ack {
-	int32 status = 1;
-	string description = 2;
-	google.protobuf.Any value =3;
+	google.protobuf.Any value = 1;
+	int32 version = 2;
+	int32 status = 3;
+	string description = 4;
 }
 
 message echoRequest {
