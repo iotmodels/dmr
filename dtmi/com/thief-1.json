@@ -1,0 +1,50 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:THIEF;1",
+  "@type": "Interface",
+  "displayName": "THIEF",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "Workingset",
+      "schema": "long"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ManagedMemory",
+      "schema": "long"
+    },
+    {
+      "@type": "Property",
+      "name": "OSVersion",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "FrameworkVersion",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "SDKVersion",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "MyWriteableProperty",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Command",
+      "name": "MyCommand",
+      "request": {
+        "name": "payload",
+        "schema": "string"
+      }
+    }
+  ]
+}
