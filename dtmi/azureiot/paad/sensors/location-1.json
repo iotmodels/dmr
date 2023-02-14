@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ],
+  "@id": "dtmi:azureiot:PaaD:Sensors:Location;1",
+  "@type": "Interface",
+  "extends": ["dtmi:azureiot:PaaD:Sensors:baseSensor;1"],
+  "displayName": "Location",
+  "contents": [
+    {
+      "@type": [
+        "Telemetry"
+      ],
+      "displayName": "Location",
+      "name": "geolocation",
+      "schema": "point"
+    }
+  ]
+}
