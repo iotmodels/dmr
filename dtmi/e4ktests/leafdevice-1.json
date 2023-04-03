@@ -1,0 +1,33 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:e4ktests:leafDevice;1",
+    "@type": "Interface",
+    "contents": [
+        {
+            "@type": "Telemetry",
+            "name": "sensorReading",
+            "schema": "double"
+        },
+        {
+            "@type": "Command",
+            "name": "getInterval",
+            "response": {
+                "name": "getIntervalResponse",
+                "schema": "integer"
+            }
+        },
+        {
+            "@type": "Command",
+            "name": "setInterval",
+            "request": {
+                "name": "setIntervalRequest",
+                "schema": "integer"
+            },
+            "response": {
+                "name": "setIntervalResponse",
+                "schema": "integer"
+            }
+        }
+    ]
+}
+        
