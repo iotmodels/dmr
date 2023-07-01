@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;2", 
+    "dtmi:dtdl:bindings:mqtt;1"
+  ],
+  "@id": "dtmi:rpc:example:mathServer;1",
+  "@type": "Interface",
+  "displayName": "mqtt_commands",
+  "contents": [
+    {
+      "@type": [ "Command", "mqtt" ],
+      "name": "isPrime",
+      "mqttContentType": "json",
+      "mqttRequestTopic": "math/service/isPrime",
+      "request": {
+        "name": "isPrimeRequest",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+
+              "name": "number",
+              "schema": "integer"
+            },
+            {
+
+              "name": "invokerStartTime",
+              "schema": "integer"
+            },
+            {
+              "name": "invokerId",
+              "schema": "string"
+            }
+          ]
+        }
+      },
+      "response": {
+        "name": "isPrimeResponse",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+
+              "name": "number",
+              "schema": "integer"
+            },
+            {
+              "name": "isPrime",
+              "schema": "boolean"
+            },
+            {
+              "name": "ops",
+              "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+              }
+            },
+            {
+              "name": "invokerId",
+              "schema": "string"
+            },
+            {
+              "name": "executorId",
+              "schema": "string"
+            },
+            { 
+              "name": "computeMS",
+              "schema": "long"
+            },
+            { 
+              "name": "threadId",
+              "schema": "integer"            
+            }
+          ]
+        }
+        
+      }
+    }
+  ]
+}
