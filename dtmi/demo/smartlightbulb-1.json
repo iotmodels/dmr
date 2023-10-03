@@ -1,0 +1,45 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:demo:smartlightbulb;1",
+  "@type": "Interface",
+  "displayName": "smartlightbulb",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "batteryLife",
+      "schema": "integer"
+    },
+    {
+      "@type": "Command",
+      "name": "blink",
+      "request": {
+        "name": "blinkTimes",
+        "schema": "integer"
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "lastBatteryReplacement",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Property",
+      "name": "lightState",
+      "writable": true,
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "On",
+            "enumValue": 1
+          },
+          {
+            "name": "Off",
+            "enumValue": 0
+          }
+        ]
+      }
+    }
+  ]
+}
